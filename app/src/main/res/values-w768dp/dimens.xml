@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 每個版面的 根布局容器 -->
+    <dimen name="activity_padding_left_right">28dp</dimen>
+    <dimen name="activity_padding_top">5dp</dimen>
+
+    <!-- 按鈕 -->
+    <dimen name="button_padding">5dp</dimen>
+    <dimen name="button_text_size">24sp</dimen>
+
+    <!-- 輸入框 -->
+    <dimen name="editText_text_size">24sp</dimen>
+
+    <!-- TextView -->
+    <dimen name="textView_text_size">24sp</dimen>
+    <dimen name="textView_title_text_size">32sp</dimen>
+
+    <!-- RadioButton -->
+    <dimen name="radioButton_text_size">24sp</dimen>
+    <dimen name="radioButton_right_margin">20dp</dimen>
+
+    <!-- CheckBox -->
+    <dimen name="checkBox_text_size">24sp</dimen>
+
+    <!-- 下拉式選單 -->
+    <dimen name="spinner_text_size">24sp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <!-- address_selector -->
+    <dimen name="address_selector_text_size">32sp</dimen>
+
+</resources>

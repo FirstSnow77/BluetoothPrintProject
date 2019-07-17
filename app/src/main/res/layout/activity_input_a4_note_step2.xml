@@ -1,0 +1,627 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.InputA4NoteStep2Activity">
+
+    <include layout="@layout/custom_toolbar"/>
+    <ScrollView
+        android:layout_marginTop="60dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/activity_padding_left_right"
+            android:paddingTop="@dimen/activity_padding_top"
+            android:paddingRight="@dimen/activity_padding_left_right"
+            tools:context=".activity.InputA4NoteStep2Activity">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="#E0FFFF"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="配送資料"
+                        android:textColor="#4a4a4a"
+                        android:textSize="@dimen/textView_title_text_size" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/colorPrimaryDark" />
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="出貨日期"
+                        android:textColor="#4a4a4a"
+                        android:textSize="@dimen/textView_text_size" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/editText_input_date"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:cursorVisible="true"
+                            android:hint="週日不配送  "
+                            android:inputType="date"
+                            android:maxLines="1"
+                            android:textColor="@android:color/darker_gray"
+                            android:textColorHint="@android:color/darker_gray"
+                            android:textSize="@dimen/editText_text_size" />
+
+                        <ImageButton
+                            android:id="@+id/calender_btn1"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:background="@drawable/calender"
+                            android:scaleType="fitCenter" />
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="希望配達日期(週日不配送  )"
+                        android:textColor="#4a4a4a"
+                        android:textSize="@dimen/textView_text_size" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/editText_input_hope_date"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:cursorVisible="true"
+                            android:hint="週日不配送  "
+                            android:maxLines="1"
+                            android:textColor="@android:color/darker_gray"
+                            android:textColorHint="@android:color/darker_gray"
+                            android:textSize="@dimen/editText_text_size" />
+
+                        <ImageButton
+                            android:id="@+id/calender_btn2"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:background="@drawable/calender"
+                            android:scaleType="fitCenter" />
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="希望配達時段"
+                        android:textColor="#4a4a4a"
+                        android:textSize="@dimen/textView_text_size" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup_arrive_time"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:clipChildren="true"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/radio_arrive_time_set1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/radioButton_right_margin"
+                            android:checked="true"
+                            android:text="不指定"
+                            android:textColor="@color/radio_button_selector"
+                            android:textSize="@dimen/radioButton_text_size"
+                            android:layout_marginEnd="@dimen/radioButton_right_margin" />
+
+                        <RadioButton
+                            android:id="@+id/radio_arrive_time_set_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/radioButton_right_margin"
+                            android:text="13時前"
+                            android:textColor="@color/radio_button_selector"
+                            android:textSize="@dimen/radioButton_text_size"
+                            android:layout_marginEnd="@dimen/radioButton_right_margin" />
+
+                        <RadioButton
+                            android:id="@+id/radio_arrive_time_set_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/radioButton_right_margin"
+                            android:text="14-18時"
+                            android:textColor="@color/radio_button_selector"
+                            android:textSize="@dimen/radioButton_text_size"
+                            android:layout_marginEnd="@dimen/radioButton_right_margin" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="溫層"
+                        android:textColor="#4a4a4a"
+                        android:textSize="@dimen/textView_text_size" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup_temperate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/radio_temperate_set_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/radioButton_right_margin"
+                            android:checked="true"
+                            android:text="常溫"
+                            android:textColor="@color/radio_button_selector"
+                            android:textSize="@dimen/radioButton_text_size"
+                            android:layout_marginEnd="@dimen/radioButton_right_margin" />
+
+                        <RadioButton
+                            android:id="@+id/radio_temperate_set_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/radioButton_right_margin"
+                            android:text="冷藏"
+                            android:textColor="@color/radio_button_selector"
+                            android:textSize="@dimen/radioButton_text_size"
+                            android:layout_marginEnd="@dimen/radioButton_right_margin" />
+
+                        <RadioButton
+                            android:id="@+id/radio_temperate_set_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/radioButton_right_margin"
+                            android:text="冷凍"
+                            android:textColor="@color/radio_button_selector"
+                            android:textSize="@dimen/radioButton_text_size"
+                            android:layout_marginEnd="@dimen/radioButton_right_margin" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="託運單類型"
+                        android:textColor="#4a4a4a"
+                        android:textSize="@dimen/textView_text_size" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup_waybill_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/radio_waybill_set1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/radioButton_right_margin"
+                            android:checked="true"
+                            android:text="一般單"
+                            android:textColor="@color/radio_button_selector"
+                            android:textSize="@dimen/radioButton_text_size"
+                            android:layout_marginEnd="@dimen/radioButton_right_margin" />
+
+                        <RadioButton
+                            android:id="@+id/radio_waybill_set2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/radioButton_right_margin"
+                            android:text="代收單"
+                            android:textColor="@color/radio_button_selector"
+                            android:textSize="@dimen/radioButton_text_size"
+                            android:visibility="gone"
+                            android:layout_marginEnd="@dimen/radioButton_right_margin" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/textView_product_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="報值金"
+                        android:textColor="#4a4a4a"
+                        android:textSize="@dimen/textView_text_size" />
+
+                    <EditText
+                        android:id="@+id/editText_product_price"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:background="@null"
+                        android:cursorVisible="true"
+                        android:hint="請輸入報值金額"
+                        android:inputType="number"
+                        android:maxLines="1"
+                        android:textColor="@android:color/darker_gray"
+                        android:textColorHint="@android:color/darker_gray"
+                        android:textSize="@dimen/editText_text_size"
+                        android:layout_marginStart="10dp" />
+
+
+                    <!-- 這段在 12/26 的會議上取消 -->
+                    <!--<TextView-->
+                    <!--android:visibility="gone"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="尺寸"-->
+                    <!--android:layout_marginTop="10dp"-->
+                    <!--android:textColor="#4a4a4a"-->
+                    <!--android:textSize="@dimen/textView_text_size" />-->
+                    <!--<RadioGroup-->
+                    <!--android:visibility="visible"-->
+                    <!--android:id="@+id/radioGroup_size"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:orientation="horizontal">-->
+
+                    <!--<RadioButton-->
+                    <!--android:id="@+id/radio_size_set_1"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:checked="true"-->
+                    <!--android:text="60cm" />-->
+
+                    <!--<RadioButton-->
+                    <!--android:id="@+id/radio_size_set_2"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="90cm" />-->
+
+                    <!--<RadioButton-->
+                    <!--android:id="@+id/radio_size_set_3"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="120cm" />-->
+                    <!--</RadioGroup>-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="注意事項"
+                        android:textColor="#4a4a4a"
+                        android:textSize="@dimen/textView_text_size" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/checkbox_easy_broke"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="易碎物品"
+                            android:textSize="@dimen/checkBox_text_size" />
+
+                        <CheckBox
+                            android:id="@+id/checkbox_precision_item"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="精密儀器"
+                            android:textSize="@dimen/checkBox_text_size" />
+                    </LinearLayout>
+
+                    <!--<LinearLayout-->
+                    <!--android:layout_marginTop="10dp"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:orientation="horizontal"-->
+                    <!--android:layout_height="wrap_content">-->
+                    <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="發票統編"-->
+                    <!--android:textColor="#4a4a4a"-->
+                    <!--android:textSize="@dimen/textView_text_size" />-->
+                    <!--<EditText-->
+                    <!--android:id="@+id/editText_TaxID"-->
+                    <!--android:text=""-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginLeft="10dp"-->
+                    <!--android:background="@null"-->
+                    <!--android:hint="請輸入統編"-->
+                    <!--android:inputType="number"-->
+                    <!--android:maxLines="1"-->
+                    <!--android:textColor="@android:color/darker_gray"-->
+                    <!--android:textColorHint="@android:color/darker_gray"-->
+                    <!--android:textSize="@dimen/editText_text_size"-->
+                    <!--android:layout_marginStart="10dp" />-->
+                    <!--</LinearLayout>-->
+
+                    <!--<LinearLayout-->
+                    <!--android:layout_marginTop="10dp"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:orientation="horizontal"-->
+                    <!--android:layout_height="wrap_content">-->
+                    <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="發票列印"-->
+                    <!--android:textColor="#4a4a4a"-->
+                    <!--android:textSize="@dimen/textView_text_size" />-->
+                    <!--<RadioGroup-->
+                    <!--android:id="@+id/radioGroup_IsPrint"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:orientation="horizontal">-->
+
+                    <!--<RadioButton-->
+                    <!--android:id="@+id/radio_IsPrint_set1"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginRight="@dimen/radioButton_right_margin"-->
+                    <!--android:checked="true"-->
+                    <!--android:text="列印發票"-->
+                    <!--android:textColor="@color/radio_button_selector"-->
+                    <!--android:textSize="@dimen/radioButton_text_size" />-->
+
+                    <!--<RadioButton-->
+                    <!--android:id="@+id/radio_IsPrint_set2"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginRight="@dimen/radioButton_right_margin"-->
+                    <!--android:text="不列印發票"-->
+                    <!--android:textColor="@color/radio_button_selector"-->
+                    <!--android:textSize="@dimen/radioButton_text_size" />-->
+                    <!--</RadioGroup>-->
+                    <!--</LinearLayout>-->
+
+                    <!--<LinearLayout-->
+                    <!--android:layout_marginTop="10dp"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:orientation="horizontal"-->
+                    <!--android:layout_height="wrap_content">-->
+                    <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="發票捐贈"-->
+                    <!--android:textColor="#4a4a4a"-->
+                    <!--android:textSize="@dimen/textView_text_size" />-->
+                    <!--<RadioGroup-->
+                    <!--android:id="@+id/radioGroup_IsGive"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:orientation="horizontal">-->
+
+                    <!--<RadioButton-->
+                    <!--android:id="@+id/radio_IsGive_set1"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginRight="@dimen/radioButton_right_margin"-->
+                    <!--android:text="捐贈"-->
+                    <!--android:textColor="@color/radio_button_selector"-->
+                    <!--android:textSize="@dimen/radioButton_text_size" />-->
+
+                    <!--<RadioButton-->
+                    <!--android:id="@+id/radio_IsGive_set2"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:checked="true"-->
+                    <!--android:layout_marginRight="@dimen/radioButton_right_margin"-->
+                    <!--android:text="不捐贈"-->
+                    <!--android:textColor="@color/radio_button_selector"-->
+                    <!--android:textSize="@dimen/radioButton_text_size" />-->
+                    <!--</RadioGroup>-->
+                    <!--</LinearLayout>-->
+
+                    <!--<LinearLayout-->
+                    <!--android:layout_marginTop="10dp"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:orientation="horizontal"-->
+                    <!--android:layout_height="wrap_content">-->
+                    <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="共通載具"-->
+                    <!--android:textColor="#4a4a4a"-->
+                    <!--android:textSize="@dimen/textView_text_size" />-->
+                    <!--<EditText-->
+                    <!--android:id="@+id/editText_InvoiceCarrier"-->
+                    <!--android:text=""-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginLeft="10dp"-->
+                    <!--android:background="@null"-->
+                    <!--android:hint="請輸入載具"-->
+                    <!--android:inputType="text"-->
+                    <!--android:maxLines="1"-->
+                    <!--android:textColor="@android:color/darker_gray"-->
+                    <!--android:textColorHint="@android:color/darker_gray"-->
+                    <!--android:textSize="@dimen/editText_text_size"-->
+                    <!--android:layout_marginStart="10dp" />-->
+                    <!--</LinearLayout>-->
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/colorPrimaryDark" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="#FAFAD2"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="包裹資料"
+                        android:textColor="#4a4a4a"
+                        android:textSize="@dimen/textView_title_text_size" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/colorPrimaryDark" />
+
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="品名"
+                        android:textColor="#4a4a4a"
+                        android:textSize="@dimen/textView_text_size" />
+
+                    <Spinner
+                        android:id="@+id/s_product_name"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:spinnerMode="dialog"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="訂單編號"
+                        android:textColor="#4a4a4a"
+                        android:textSize="@dimen/textView_text_size"
+                        android:visibility="gone" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:background="@null"
+                        android:cursorVisible="true"
+                        android:hint="請輸入訂單編號"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:textColor="@android:color/darker_gray"
+                        android:textColorHint="@android:color/darker_gray"
+                        android:textSize="@dimen/editText_text_size"
+                        android:visibility="gone"
+                        android:layout_marginStart="10dp" />
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="備註"
+                        android:textColor="#4a4a4a"
+                        android:textSize="@dimen/textView_text_size" />
+
+                    <EditText
+                        android:id="@+id/editText_note"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:background="@null"
+                        android:cursorVisible="true"
+                        android:hint="請輸入備註"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:textColor="@android:color/darker_gray"
+                        android:textColorHint="@android:color/darker_gray"
+                        android:textSize="@dimen/editText_text_size"
+                        android:layout_marginStart="10dp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/colorPrimaryDark" />
+
+                </LinearLayout>
+
+                <com.suda.bluetoothprintproject.widget.AddSubView
+                    android:id="@+id/pdf_add_sub_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_margin="5dp"
+                    tools:ignore="RtlHardcoded" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/previous_step_btn"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/button_selector"
+                        android:padding="@dimen/button_padding"
+                        android:layout_margin="5dp"
+                        android:text="上一步"
+                        android:textColor="#ffffff"
+                        android:textSize="@dimen/button_text_size" />
+
+                    <Button
+                        android:id="@+id/browser_printer_btn"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/button_selector"
+                        android:padding="@dimen/button_padding"
+                        android:layout_margin="5dp"
+                        android:text="瀏覽列印"
+                        android:textColor="#ffffff"
+                        android:textSize="@dimen/button_text_size" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--<ProgressBar-->
+                <!--android:id="@+id/progressBar1"-->
+                <!--style="?android:attr/progressBarStyleLarge"-->
+                <!--android:layout_centerInParent="true"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_margin="17dp" />-->
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

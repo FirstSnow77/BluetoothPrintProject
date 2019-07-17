@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="410dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".widget.AddressSelector">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="縣市:"
+            android:textAlignment="center"
+            android:textColor="#4a4a4a"
+            android:textSize="@dimen/textView_title_text_size"
+            android:textStyle="bold"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp" />
+
+        <Spinner
+            android:id="@+id/s_address_menu1"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:spinnerMode="dialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="鄉鎮區:"
+            android:textAlignment="center"
+            android:textColor="#4a4a4a"
+            android:textSize="@dimen/textView_title_text_size"
+            android:textStyle="bold"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"/>
+
+        <Spinner
+            android:id="@+id/s_address_menu2"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:spinnerMode="dialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="路街:"
+            android:textAlignment="center"
+            android:textColor="#4a4a4a"
+            android:textSize="@dimen/textView_title_text_size"
+            android:textStyle="bold"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"/>
+
+        <EditText
+            android:id="@+id/streetFilterText"
+            android:background="@android:drawable/editbox_background"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:cursorVisible="true"
+            android:hint="關鍵字"
+            android:inputType="text"
+            android:maxLines="1"
+            android:textColor="#4a4a4a"
+            android:textColorHint="@android:color/darker_gray"
+            android:textSize="@dimen/editText_text_size"
+            android:layout_marginStart="10dp" />
+
+        <Spinner
+            android:id="@+id/s_address_menu3"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:spinnerMode="dialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="100dp">
+
+        <EditText
+            android:id="@+id/laneText"
+            android:background="@android:drawable/editbox_background"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:cursorVisible="true"
+            android:inputType="number"
+            android:maxLines="1"
+            android:textColor="#4a4a4a"
+            android:textColorHint="@android:color/darker_gray"
+            android:textSize="@dimen/editText_text_size" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:text="巷"
+            android:textAlignment="center"
+            android:textColor="#4a4a4a"
+            android:textSize="@dimen/textView_title_text_size"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/alleyText"
+            android:background="@android:drawable/editbox_background"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:cursorVisible="true"
+            android:inputType="number"
+            android:maxLines="1"
+            android:textColor="#4a4a4a"
+            android:textColorHint="@android:color/darker_gray"
+            android:textSize="@dimen/editText_text_size" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:text="弄"
+            android:textAlignment="center"
+            android:textColor="#4a4a4a"
+            android:textSize="@dimen/textView_title_text_size"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginStart="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp">
+
+        <EditText
+            android:id="@+id/noText"
+            android:background="@android:drawable/editbox_background"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:cursorVisible="true"
+            android:inputType="number"
+            android:maxLines="1"
+            android:textColor="#4a4a4a"
+            android:textColorHint="@android:color/darker_gray"
+            android:textSize="@dimen/editText_text_size"
+            android:layout_marginStart="10dp" />
+
+        <TextView
+            android:layout_marginStart="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="號"
+            android:textAlignment="center"
+            android:textColor="#4a4a4a"
+            android:textSize="@dimen/textView_title_text_size"
+            android:textStyle="bold"
+            android:layout_marginLeft="5dp" />
+
+        <EditText
+            android:id="@+id/floorText"
+            android:background="@android:drawable/editbox_background"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:cursorVisible="true"
+            android:inputType="number"
+            android:maxLines="1"
+            android:textColor="#4a4a4a"
+            android:textColorHint="@android:color/darker_gray"
+            android:textSize="@dimen/editText_text_size"
+            android:layout_marginStart="10dp" />
+
+        <TextView
+            android:layout_marginStart="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="樓"
+            android:textAlignment="center"
+            android:textColor="#4a4a4a"
+            android:textSize="@dimen/textView_title_text_size"
+            android:textStyle="bold"
+            android:layout_marginLeft="5dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginStart="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp">
+
+        <EditText
+            android:id="@+id/roomText"
+            android:background="@android:drawable/editbox_background"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:cursorVisible="true"
+            android:inputType="number"
+            android:maxLines="1"
+            android:textColor="#4a4a4a"
+            android:textColorHint="@android:color/darker_gray"
+            android:textSize="@dimen/editText_text_size"
+            android:layout_marginStart="10dp" />
+
+        <TextView
+            android:layout_marginStart="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="室之"
+            android:textAlignment="center"
+            android:textColor="#4a4a4a"
+            android:textSize="@dimen/textView_title_text_size"
+            android:textStyle="bold"
+            android:layout_marginLeft="5dp" />
+
+        <EditText
+            android:id="@+id/dashText"
+            android:background="@android:drawable/editbox_background"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:cursorVisible="true"
+            android:inputType="number"
+            android:maxLines="1"
+            android:textColor="#4a4a4a"
+            android:textColorHint="@android:color/darker_gray"
+            android:textSize="@dimen/editText_text_size"
+            android:layout_marginStart="10dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

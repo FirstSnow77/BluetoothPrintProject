@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?><!--安卓 9.0 以上版本, google 預設只能使用 http"s" 的請求, 所以需要更改其設定:-->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="false" />
+</network-security-config>

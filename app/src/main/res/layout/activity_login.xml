@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.LoginActivity">
+
+    <include layout="@layout/custom_toolbar"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/activity_padding_left_right"
+        android:paddingRight="@dimen/activity_padding_left_right"
+        android:paddingTop="@dimen/activity_padding_top">
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:textAlignment="textStart"
+            android:textStyle="bold"
+            android:text="SudaID"
+            android:textSize="@dimen/textView_text_size"
+            tools:ignore="RtlCompat" />
+
+        <EditText
+            android:id="@+id/editText_login_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="@null"
+            android:cursorVisible="true"
+            android:hint="輸入帳號"
+            android:inputType="text"
+            android:singleLine="true"
+            android:textColor="@android:color/darker_gray"
+            android:textColorHint="@android:color/darker_gray"
+            android:textSize="@dimen/editText_text_size"
+            android:layout_marginStart="10dp">
+            <requestFocus />
+        </EditText>
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:textAlignment="textStart"
+            android:textStyle="bold"
+            android:text="PWD"
+            android:textSize="@dimen/textView_text_size"
+            tools:ignore="RtlCompat" />
+
+        <EditText
+            android:id="@+id/editText_login_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="@null"
+            android:cursorVisible="true"
+            android:hint="輸入密碼"
+            android:inputType="textPassword"
+            android:textColor="@android:color/darker_gray"
+            android:textColorHint="@android:color/darker_gray"
+            android:textSize="@dimen/editText_text_size"
+            android:layout_marginStart="10dp" />
+
+        <Button
+            android:id="@+id/login_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_selector"
+            android:gravity="center"
+            android:padding="@dimen/button_padding"
+            android:text="登入"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/button_text_size" />
+
+        <TextView
+            android:layout_weight="3"
+            android:layout_width="match_parent"
+            android:layout_height="0dp" />
+
+        <TextView
+            android:id="@+id/tv_version_name"
+            android:layout_gravity="end"
+            android:textSize="14sp"
+            android:text="版本: 1.0.0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</LinearLayout>

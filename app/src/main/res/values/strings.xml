@@ -1,0 +1,5 @@
+<resources>
+    <string name="search_app_name">郵號查找列印</string>
+    <string name="input_app_name">託運單填寫</string>
+    <string name="title_activity_login">LoginActivity</string>
+</resources>
