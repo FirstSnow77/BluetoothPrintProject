@@ -134,7 +134,9 @@ public class BaseToolbarActivity extends BaseUpdateCheckActivity implements View
 				});
 		AlertDialog alert = builder.create();
 		alert.show();
+		//123
 	}
+	
 	
 	public void onSuperBackPressed(){
 		super.onBackPressed();
